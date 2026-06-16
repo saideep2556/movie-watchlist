@@ -22,7 +22,7 @@ const SearchBar = () => {
         const data = await res.json();
         setMovieList(data);
     } catch (e) {
-        setError(e);
+        setError(e.message);
     } finally {
         setLoading(false);
     }
